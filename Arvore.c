@@ -1,4 +1,3 @@
-
 #include "Arvore.h"
 #include <stdlib.h>
 #include <iostream>
@@ -7,17 +6,24 @@ using namespace std;
 
 Arvore::Arvore()
 {
-    raiz = NULL;
+    cout << "1";
+	raiz = NULL;
+	cout << "2";
 }
 
 void Arvore::insere1(No **pNo ,int x)
 {
+	cout << "3";
  if(pNo == NULL)
  {
+ 	cout << "4";
   	(*pNo) = (No*) malloc (sizeof(No));
-  	(*pNo)->valor = x;
-    (*pNo)->esq = NULL;
-    (*pNo)->dir = NULL;
+  	cout << "5";
+	(*pNo)->valor = x;
+  	cout << "6";
+	(*pNo)->esq = NULL;
+    cout << "7";
+	(*pNo)->dir = NULL;
 
  }else{
       if((*pNo)->valor > x)
@@ -89,4 +95,4 @@ void Arvore::busca(No** pNo,int x)
                     	}
         	}
     	}
-}
+}  
